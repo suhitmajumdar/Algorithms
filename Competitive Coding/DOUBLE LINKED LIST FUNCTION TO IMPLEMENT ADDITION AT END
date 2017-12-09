@@ -1,0 +1,22 @@
+int append()
+{   struct node *temp,*p=head;
+    temp=(struct node*)malloc(sizeof(struct node));
+
+    printf("Enter data into the list\n ");
+    scanf("%d",&temp->data);
+    temp->left=NULL;
+    temp->right=NULL;
+    if(head==NULL)
+    {
+        head=temp;
+    }
+    else
+    {
+        while(p->right!=NULL)
+        {
+            p=p->right;
+        }
+        p->right=temp;
+    }
+    return 1;
+}
